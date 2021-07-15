@@ -135,6 +135,7 @@ class CameraPicker extends StatefulWidget {
     bool enablePinchToZoom = true,
     bool shouldDeletePreviewFile = false,
     bool shouldLockPortrait = true,
+    bool useRootNavigator = true,
     Duration maximumRecordingDuration = const Duration(seconds: 15),
     ThemeData? theme,
     int cameraQuarterTurns = 0,
@@ -149,7 +150,7 @@ class CameraPicker extends StatefulWidget {
     }
     final AssetEntity? result = await Navigator.of(
       context,
-      rootNavigator: true,
+      rootNavigator: useRootNavigator,
     ).push<AssetEntity>(
       SlidePageTransitionBuilder<AssetEntity>(
         builder: CameraPicker(
