@@ -817,6 +817,7 @@ class CameraPickerState extends State<CameraPicker>
           previewXFile: file,
           theme: theme,
           shouldDeletePreviewFile: shouldDeletePreviewFile,
+          onEntitySaving: widget.onEntitySaving,
         );
         if (entity != null) {
           Navigator.of(context).pop(entity);
